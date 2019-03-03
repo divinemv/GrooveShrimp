@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                font-family: 'Montserrat', sans-serif;
+                margin:0;
+                }   
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                flex-wrap: wrap;
+                width: 60vw;
+                margin: 0 auto;
+                min-height: 80vh;
+                }
+            .btn {
+                flex: 1 1 auto;
+                margin: 10px;
+                padding: 30px;
+                text-align: center;
+                text-transform: uppercase;
+                transition: 0.5s;
+                background-size: 200% auto;
+                color: white;
+                /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+                box-shadow: 0 0 20px #eee;
+                border-radius: 10px;
+                }
+                    
+            .btn:hover {
+                background-position: right center; /* change the direction of the change here */
+            }
+            .btn-1 {
+                background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+            }
+            #rcorners1 {
+                border-radius: 10px;
+                background-image: linear-gradient(to right, #5966b2 20%, #395884 51%, #387b93 100%);
+                padding: 7px; 
+                width: 115%;
+                height: 11%;    
+            }
+            ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: white;
+                opacity: 1; /* Firefox */
+            }
+            :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                color: white;
+            }
+            ::-ms-input-placeholder { /* Microsoft Edge */
+                color: white;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Music Searcher</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/stylesheet.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+    </head>
+<!--Body-->
+    <body style="background-color: #314c66" background="https://i.imgur.com/ahQKzdh.jpg">
+        <div align="center">
+                <h1 style="color: white;" class="font-weight-light"><i class="em em-fried_shrimp"></i><font size="50%">  </font><i class="em em-fried_shrimp"></i></h1>
+            </div>
+        <br>
+        <br>
+<!--Table for searching -->
+    <form method="POST" action="/search">
+        <table align="center" width="80" height="300">
+             <tr>
+                <td>
+                    <input type="text" placeholder="Song" name="song" id="rcorners1">
+                    <br>
+                    <br>
+                    <input type="text" placeholder="Artist" id="rcorners1" name="artist">
+                    <br>
+                    <br>
+                    <input type="text" placeholder="Album" id="rcorners1" name="album">
+                    <br>
+                    <br>
+                    <!-- <input type="text" placeholder="Genre" id="rcorners1" name="genre"> -->
+                    <font color="white">Genre</font><br>
+                    <select name="Genre">
+                            <option value="1">Blues</option>
+                            <option value="2">Classical</option>
+                            <option value="3">Country</option>
+                            <option value="4">Disco</option>
+                            <option value="5">Hip-Hop</option>
+                            <option value="6">Pop</option>
+                            <option value="7">R&B</option>
+                            <option value="8">Rap</option>
+                            <option value="9">Reggae</option>
+                            <option value="10">Rock</option>
+                            <option value="11" selected>---</option>
+                            </select>
+                    <br>
+                    <br>
+                    <input type="number" min="1860" max="2018" placeholder="Year" id="rcorners1" name="year">
+                    <br>
+                    <br>
+                    <font color="white">Show Covers:</font><br>
+                    <select name="cover">
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                            <option value="3" selected>---</option>
+                            </select>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <!-- <center> <a type="submit" class="btn btn-1">Search</a> </button> </center> -->
+                    <input type="submit" class="btn btn-1" value="Submit now!" />
+
+                </td>
+            </tr>
+        </form>
+        </table>
+<!-- Footer-->
+        <div>      
+              <footer style="text-align:center; color: white">
+                  <p>
+                      <br>
+                      <br>
+                      <br>
+                      <a href="/"><i class="em em-house"></i></a>
+                  </p>
+              </footer>
+        </div>
+
+      <!-- <script type="text/javascript" src="../static/js/script.js"></script> -->
+    </body>
+
+</html>

@@ -1,0 +1,73 @@
+
+<html>
+	<head>
+		<title>Search Results</title>
+		<style>
+			#customers {
+				font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+				border-collapse: collapse;
+				width: 100%;
+			}
+			
+			#customers td, #customers th {
+				border: 1px solid #ddd;
+				padding: 8px;
+			}
+			
+			#customers tr:nth-child(even){background-color: #f2f2f2;}
+			
+			#customers tr:hover {background-color: #ddd;}
+			
+			#customers th {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				text-align: left;
+				background-color: rgb(204, 130, 19);
+				color: white;
+			}
+		</style>
+		<meta charset="utf-8">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+	</head>
+	<body background="https://i.imgur.com/ahQKzdh.jpg">
+		<br>
+		<br>
+		<div align="center">
+            <h1 style="color: white;" class="font-weight-light"><i class="em em-fried_shrimp"></i><font size="50%">  </font><i class="em em-fried_shrimp"></i></h1>
+        </div>
+        <br>
+        <br>
+		<table class="table" id="customers">
+			<tr>
+				<th>Song</th>
+				<th>Artist</th>
+				<th>Song</th>
+				<th>Album</th>
+				<th>Genre</th>
+			</tr>
+			{% for ui_row in data %}
+			<tr>
+				<td>{{ ui_row.Song_ID }}</td>
+				<td>{{ ui_row.Artist_ID }}</td>
+				<td>{{ ui_row.Song_Name }}</td>
+				<td>{{ ui_row.Album_ID }}</td>
+				<td>{{ ui_row.Genre_ID }}</td>
+			</tr>
+			{% endfor %}
+		</table>	
+        <div>      
+			<footer style="text-align:center">
+				<p>
+					<br>
+					<br>
+					<br>
+					<a href="/search"><i class="em em-mag"></i></a>
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
