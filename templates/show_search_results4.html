@@ -46,14 +46,17 @@
 				<th>Song</th>
 				<th>Album</th>
 				<th>Artist</th>
-				<th>Cover Link</th>
+                <th>Year</th>
+                <th>Genre</th>
+
 			</tr>
 			{% for ui_row in data %}
 			<tr>
 				<td>{{ ui_row.Song }}</td>
-				<td>{{ ui_row.Album }}</td>
-				<td>{{ ui_row.Artist }}</td>
-				<td><iframe width="500" height="300" src="{{ ui_row.Cover }}/td>"></iframe></td>
+				<td>{{ ui_row.Album}}</td>
+                <td>{{ ui_row.Artist }}</td>
+                <td>{{ ui_row.Year}}</td>
+				<td>{{ ui_row.Genre }}</td>
 			{% endfor %}
 		</table>	
         <div>      

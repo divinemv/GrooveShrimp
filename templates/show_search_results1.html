@@ -14,7 +14,7 @@
 				padding: 8px;
 			}
 			
-			#customers tr {background-color: #f2f2f2;}
+			#customers tr{background-color: #f2f2f2;}
 			
 			/* #customers tr:hover {background-color: #ddd;} */
 			
@@ -46,14 +46,13 @@
 				<th>Song</th>
 				<th>Album</th>
 				<th>Artist</th>
-				<th>Cover Link</th>
 			</tr>
 			{% for ui_row in data %}
 			<tr>
 				<td>{{ ui_row.Song }}</td>
 				<td>{{ ui_row.Album }}</td>
 				<td>{{ ui_row.Artist }}</td>
-				<td><iframe width="500" height="300" src="{{ ui_row.Cover }}/td>"></iframe></td>
+			</tr>
 			{% endfor %}
 		</table>	
         <div>      
